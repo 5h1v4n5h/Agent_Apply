@@ -241,25 +241,22 @@ def ensure_template_package(
     package_dir.mkdir(parents=True, exist_ok=True)
 
     manifest_path = package_dir / "manifest.json"
-
-    if manifest_path.exists():
-        package = load_template_package(document_type, template_id, template_root=template_root)
-        _ensure_required_markers(package)
-        _write_sample_assets(package)
-        return load_template_package(document_type, template_id, template_root=template_root)
-
     template_path = package_dir / "template.docx"
 
-    manifest_path.write_text(
-        json.dumps(_default_manifest(document_type, template_id), indent=2) + "\n",
-        encoding="utf-8",
-        newline="\n",
-    )
+    if not manifest_path.exists():
+        manifest_path.write_text(
+            json.dumps(_default_manifest(document_type, template_id), indent=2) + "\n",
+            encoding="utf-8",
+            newline="\n",
+        )
+
     if not template_path.exists():
-        if document_type == "resume":
-            _create_default_resume_template(template_path)
-        else:
-            _create_default_cover_letter_template(template_path)
+        manifest_data = json.loads(manifest_path.read_text(encoding="utf-8"))
+        if manifest_data.get("renderer", "docx") == "docx" or manifest_data.get("template_format", "docx") == "docx":
+            if document_type == "resume":
+                _create_default_resume_template(template_path)
+            else:
+                _create_default_cover_letter_template(template_path)
 
     package = load_template_package(document_type, template_id, template_root=template_root)
     _ensure_required_markers(package)

@@ -1,0 +1,220 @@
+# Agent Apply Applicant Profile (Sample Template)
+# This profile serves as the ground-truth Knowledge Base for the Agent Apply AI agent.
+# Update this file or data/profile/profiles/default.yaml with your own details.
+
+identity:
+  full_name: "Alex Morgan"
+  email: "alex.morgan@example.com"
+  phone: "+1-555-019-2834"
+  location: "San Francisco, CA, USA"
+  address: "100 Market Street, San Francisco, CA 94105"
+  linkedin_url: "https://linkedin.com/in/alex-morgan-demo"
+  github_url: "https://github.com/alex-morgan-demo"
+  portfolio_url: "https://alexmorgan.dev"
+  citizenship: "United States"
+  work_authorization: "Authorized to work in the US"
+  willing_to_relocate: true
+  visa_sponsorship_needed: false
+
+education:
+  - institution: "University of California, Berkeley"
+    degree: "Bachelor of Science"
+    field: "Computer Science"
+    location: "Berkeley, CA"
+    start_date: "2020-08"
+    end_date: "2024-05"
+    gpa: "3.85/4.0"
+    honors:
+      - "Dean's Honors List (2021-2024)"
+      - "Tau Beta Pi Engineering Honor Society"
+    relevant_courses:
+      - name: "Data Structures & Algorithms"
+        grade: "A"
+        tags: ["dsa", "algorithms", "cs-core"]
+      - name: "Distributed Systems & System Design"
+        grade: "A"
+        tags: ["distributed-systems", "system-design", "cloud"]
+      - name: "Database Management Systems"
+        grade: "A"
+        tags: ["dbms", "sql", "databases"]
+      - name: "Machine Learning & Artificial Intelligence"
+        grade: "A-"
+        tags: ["ml", "ai", "deep-learning"]
+      - name: "Operating Systems & Concurrency"
+        grade: "A"
+        tags: ["operating-systems", "concurrency", "c++"]
+
+work_experiences:
+  - company: "CloudScale Systems"
+    title: "Software Engineer"
+    location: "San Francisco, CA"
+    start_date: "2024-06"
+    end_date: "Present"
+    description: "Core engineer on distributed control-plane services, building event-driven microservices, high-throughput streaming pipelines, and LLM-powered telemetry automation."
+    bullets:
+      - text: "Architected high-throughput event processing pipelines using Python, FastAPI, and Apache Kafka, handling over 150M daily events with sub-20ms p99 latency."
+        tags: ["python", "fastapi", "kafka", "distributed-systems", "backend"]
+        impact: "Processed 150M daily events with sub-20ms p99 latency"
+      - text: "Engineered automated schema migration and validation microservices using PostgreSQL and Redis, decreasing deployment rollback rates by 35%."
+        tags: ["postgresql", "redis", "migrations", "reliability"]
+        impact: "Decreased deployment rollback rates by 35%"
+      - text: "Integrated generative AI workflows into production telemetry alerting, reducing false-positive incident paging by 45% and saving 12 engineer-hours weekly."
+        tags: ["genai", "automation", "llm", "monitoring"]
+        impact: "Reduced false-positive incident paging by 45%"
+      - text: "Spearheaded Docker containerization and Kubernetes Helm chart deployments, improving CI/CD deployment cadence from bi-weekly to multiple times daily."
+        tags: ["docker", "kubernetes", "ci-cd", "devops"]
+        impact: "Accelerated deployment frequency to multiple releases daily"
+
+  - company: "Apex Data Labs"
+    title: "Software Engineering Intern"
+    location: "Sunnyvale, CA"
+    start_date: "2023-05"
+    end_date: "2023-08"
+    description: "Developed cloud-native data ingestion pipelines, automated ETL workflows, and built monitoring dashboards."
+    bullets:
+      - text: "Designed scalable serverless data extraction pipelines utilizing AWS Lambda, S3, and DynamoDB, cutting processing infrastructure costs by 28%."
+        tags: ["aws", "lambda", "serverless", "dynamodb", "cloud"]
+        impact: "Reduced monthly pipeline processing costs by 28%"
+      - text: "Authored end-to-end integration and load testing suites using pytest and Locust, boosting system code coverage from 68% to 92%."
+        tags: ["testing", "pytest", "qa", "python"]
+        impact: "Raised test coverage from 68% to 92%"
+      - text: "Optimized complex analytical SQL queries across multi-terabyte datasets, yielding a 4x reduction in average reporting latency."
+        tags: ["sql", "query-optimization", "data-warehousing"]
+        impact: "Achieved a 4x reduction in query latency"
+
+projects:
+  - name: "Autonomous Job Application Agent (Agent Apply)"
+    role: "Lead Architect & Developer"
+    description: "Local-first autonomous job application agent that discovers positions, ranks candidate fit, grounds tailoring in verified knowledge bases, and drafts resumes/cover letters."
+    tech_stack: ["Python", "FastAPI", "PostgreSQL", "Vue 3", "Celery", "Redis", "Playwright"]
+    start_date: "2024-01"
+    end_date: "Present"
+    url: "https://github.com/5h1v4n5h/Agent_Apply"
+    bullets:
+      - text: "Architected a full-stack local-first application with Vue 3 frontend, FastAPI backend, and Celery task execution queues for concurrent scraping and generation."
+        tags: ["full-stack", "fastapi", "vue", "celery", "python"]
+        impact: "Delivered production-grade local application with 1,700+ verified unit/integration tests"
+      - text: "Implemented RAG-based applicant memory engine with pgvector and evidence-grounded IR, ensuring zero hallucination in generated resume bullet points."
+        tags: ["rag", "pgvector", "ir", "llm", "vector-search"]
+        impact: "Eliminated hallucination in dynamic document generation"
+      - text: "Built provider-agnostic LLM interface supporting OpenAI, Anthropic, Gemini, DeepSeek, and local Ollama runtimes with automatic rate limiting and fallback."
+        tags: ["llm-providers", "gemini", "openai", "anthropic", "resilience"]
+        impact: "Supported 12+ LLM backends with automated fallback and rate gating"
+
+  - name: "Distributed Raft Consensus Key-Value Store"
+    role: "Sole Developer"
+    description: "Fault-tolerant distributed key-value store implementing the Raft consensus algorithm with leader election, log replication, and persistence."
+    tech_stack: ["Go", "gRPC", "Protobuf", "Distributed Systems"]
+    start_date: "2023-09"
+    end_date: "2023-12"
+    url: "https://github.com/alex-morgan-demo/raft-kv"
+    bullets:
+      - text: "Implemented Raft consensus module with leader election, heartbeat timeouts, and log replication handling arbitrary node partition failures."
+        tags: ["distributed-systems", "raft", "go", "consensus"]
+        impact: "Successfully passed Jepsen-style network partition fault tests"
+      - text: "Engineered gRPC transport layer and snapshot compaction mechanisms, sustaining 25,000 requests/sec with durable crash recovery."
+        tags: ["grpc", "protobuf", "performance", "benchmarking"]
+        impact: "Sustained 25,000 req/s throughput under load"
+
+skills:
+  languages:
+    - "Python"
+    - "TypeScript"
+    - "JavaScript"
+    - "Go"
+    - "SQL"
+    - "C++"
+    - "Bash"
+    - "HTML5/CSS3"
+  frameworks:
+    - "FastAPI"
+    - "Vue.js 3"
+    - "React"
+    - "Node.js"
+    - "Celery"
+    - "SQLAlchemy"
+    - "PyTorch"
+  databases:
+    - "PostgreSQL (pgvector)"
+    - "Redis"
+    - "AWS DynamoDB"
+    - "MongoDB"
+    - "SQLite"
+  tools:
+    - "Docker"
+    - "Kubernetes"
+    - "Git / GitHub Actions"
+    - "AWS (Lambda, S3, CloudWatch)"
+    - "Playwright"
+    - "Linux / Unix"
+    - "Postman"
+  domains:
+    - "Software Development Engineering (SDE)"
+    - "Distributed Systems & Cloud Architecture"
+    - "Generative AI & LLM Systems"
+    - "Full-Stack Web Development"
+    - "REST API Design & Microservices"
+    - "Database Design & Optimization"
+  soft_skills:
+    - "Cross-Functional Collaboration"
+    - "Technical Writing & Documentation"
+    - "Agile / Scrum Methodologies"
+    - "Root Cause Analysis & Debugging"
+    - "Code Review & Mentorship"
+  certifications:
+    - "AWS Certified Solutions Architect - Associate"
+    - "HashiCorp Certified: Terraform Associate"
+
+publications:
+  - "Distributed Consensus in Cloud-Native Multi-Tenant Architectures (Undergraduate Honors Thesis, UC Berkeley 2024)"
+
+story_bank:
+  - theme: "technical_challenge"
+    context: "At CloudScale Systems, the ingestion pipeline experienced severe queue buildup during burst traffic, causing latency spikes up to 4 seconds."
+    action: "Profiled memory and network bottlenecks, refactored batching logic into asynchronous worker pools, and introduced Redis stream backpressure controls."
+    result: "Reduced p99 processing latency from 4,000ms to under 20ms while handling 3x higher peak traffic volume."
+    applicable_to: ["backend_roles", "distributed_systems", "platform_engineering"]
+
+  - theme: "ownership_impact"
+    context: "Our team lacked standardized observability for LLM token usage and latency across distributed services, making cost tracking imprecise."
+    action: "Designed and implemented a unified telemetry middleware library in Python that captures token counts, latency distributions, and cost per request into Prometheus."
+    result: "Identified $4,500/month in redundant API calls and enabled engineering leadership to allocate model costs accurately."
+    applicable_to: ["ai_roles", "backend_roles", "infrastructure"]
+
+  - theme: "conflict_resolution"
+    context: "During a major schema redesign, frontend and backend engineers disagreed on GraphQL vs REST OpenAPI specs under a tight shipping deadline."
+    action: "Convened a structured decision meeting, documented clear trade-offs regarding caching, client bundle size, and schema migration risks, and proposed a staged REST approach with strict OpenAPI type contracts."
+    result: "Reached unanimous team alignment within 2 days and shipped the release 1 week ahead of deadline."
+    applicable_to: ["engineering_culture", "leadership", "collaboration"]
+
+qa_bank:
+  - question_type: "authorization"
+    question_pattern: "Are you legally authorized to work in the country where this job is located?"
+    canonical_answer: "Yes, I am fully authorized to work without restrictions."
+    confidence: "high"
+    needs_review: false
+  - question_type: "sponsorship"
+    question_pattern: "Will you now or in the future require visa sponsorship for employment?"
+    canonical_answer: "No, I do not require sponsorship."
+    confidence: "high"
+    needs_review: false
+  - question_type: "experience_years"
+    question_pattern: "How many years of relevant software engineering experience do you have?"
+    canonical_answer: "2+"
+    confidence: "high"
+    needs_review: false
+  - question_type: "start_date"
+    question_pattern: "When are you available to begin work?"
+    canonical_answer: "Within 2 to 3 weeks upon offer acceptance."
+    confidence: "high"
+    needs_review: false
+  - question_type: "why_role"
+    question_pattern: "Why are you interested in this position?"
+    canonical_answer: "I am passionate about building scalable, resilient backend services and intelligent agent systems. This role directly aligns with my experience in distributed architectures, API design, and modern AI integration."
+    confidence: "high"
+    needs_review: false
+  - question_type: "why_company"
+    question_pattern: "Why do you want to join our company?"
+    canonical_answer: "Your commitment to engineering excellence, high-scale systems, and high-impact software matches the challenges I love tackling. I want to contribute to mission-critical infrastructure that customers rely upon daily."
+    confidence: "high"
+    needs_review: false

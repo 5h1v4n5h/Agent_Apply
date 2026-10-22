@@ -1,0 +1,202 @@
+{
+  "res": {
+    "id": "REQ-200681116",
+    "type": "REQ",
+    "managedPipelineRole": false,
+    "reqId": "REQ-200681116",
+    "jobNumber": "200681116",
+    "postingTitle": "Software Engineer",
+    "transformedPostingTitle": "software-engineer",
+    "jobSummary": "Apple is where individual imaginations gather together, committing to the values that lead to great work. Every new product we build, service we create, or Apple Store experience we deliver is the result of us making each other\u2019s ideas stronger. That happens because every one of us shares a belief that we can make something wonderful and share it with the world, changing lives for the better. It\u2019s the diversity of our people and their thinking that inspires the innovation that runs through everything we do. When we bring everybody in, we can do the best work of our lives. Here, you\u2019ll do more than join something \u2014 you\u2019ll add something.\n\nOur Operations Team, part of the CS&E organization, plays a critical role in ensuring the stability, reliability, and performance of multiple customer-facing applications that serve millions of users across diverse services. We specialize in sustaining and optimizing our systems, driving operational excellence through automation, cloud infrastructure management, AI-driven insights, and proactive monitoring. Our team thrives on solving challenging problems around Traffic, Deployments, DDoS, WAF, enhancing system resilience, and enabling seamless experiences for our customers. By collaborating closely with development, security, and business teams, we ensure that every application we manage meets Apple's standards of Site Reliability and Security .",
+    "description": "We are seeking a skilled DevOps Engineer who is passionate about operational excellence through automation, AI-driven engineering processes, and strong problem-solving abilities. As a DevOps Engineer, you will play a crucial role in ensuring the seamless integration of development and operations processes to deliver best-in-class and highly available systems. Your expertise in cloud platforms, automation, infrastructure management, and applying LLM/AI capabilities to solve real operational challenges will be vital to the success of our projects. We're looking for someone who thrives on breaking down complex, ambiguous problems and engineering practical, scalable solutions \u2014 not just executing tasks, but thinking critically about root causes and long-term reliability.",
+    "responsibilities": "Linux, Cloud Infrastructure & Migration: Deep operational expertise across Linux internals (process/memory/CPU diagnostics, networking, kernel-level troubleshooting) combined with ownership of AWS/Cloud infrastructure \u2014 architecture, provisioning, disaster recovery , and end-to-end cloud migration (on-prem to AWS), using Terraform/Ansible for infrastructure-as-code at scale.\nKubernetes/EKS Lifecycle & Container Orchestration: Manage the full lifecycle of Kubernetes/EKS environments \u2014 version upgrades, live/rolling patching with zero downtime, node maintenance, cluster optimization, and Helm chart development/troubleshooting.\nTraffic, Network & Security Engineering: Configure and manage NGINX (reverse proxy , load balancing, SSL/TLS, ingress) and GSLB for traffic distribution/failover; implement Shield/WAF-based DDoS protection, threat modeling, and security hardening across the SDLC, including PCI/SOC2/SOX compliance readiness.\nCI/CD, Monitoring & Incident Response: Design and maintain CI/CD pipelines (Jenkins, Spinnaker, GitHub Actions); build actionable monitoring/alerting frameworks (Splunk, Dynatrace, Prometheus, Grafana); participate in production on- call and drive thorough root-cause analysis for P1/P1c incidents.\nAI/LLM-Driven Intelligent Automation: Apply LLM/GenAI-based approaches to automate incident triage, log/anomaly analysis, root cause analysis, runbook generation, and self-healing systems; continuously evaluate and integrate emerging AI/LLM tooling into CI/CD and operations workflows to reduce manual toil.\nEngineering Process Ownership: Design and implement engineering processes that simplify how development teams build, deploy , and operate software, embedding security , compliance, and automation best practices throughout.",
+    "standardWeeklyHours": 40,
+    "highJobTitle": "Software Engineering Applications ICT3",
+    "teamNames": [
+      "Software and Services"
+    ],
+    "locations": [
+      {
+        "id": "postLocation-HY1",
+        "name": "Hyderabad",
+        "city": "Hyderabad",
+        "code": "HY1",
+        "stateProvince": "Telangana",
+        "countryName": "India",
+        "countryID": "iso-country-IND",
+        "level": 5,
+        "active": true,
+        "postLocationCountryID": "postLocation-INDC",
+        "postingIdentifier": "1052",
+        "showPayAndBenefits": false,
+        "promotedOnLinkedIn": false
+      }
+    ],
+    "localeInfo": {
+      "languageCode": "en_US",
+      "dateFormat": "MMM D, YYYY",
+      "defaultLocaleCode": "en-US",
+      "locale": "en-us",
+      "data": "en_US",
+      "translation": "en-US"
+    },
+    "postDateInGMT": "2026-09-02T17:32:37.355+00:00",
+    "postingPostLocationData": {
+      "en_US": {
+        "postLocation-HY1": {
+          "localeLanguage": {
+            "en_US": "English - US"
+          },
+          "postingDate": "2026-09-02T17:32:37.355+00:00"
+        }
+      }
+    },
+    "longPostingDate": "2026-09-02T17:32:37.355+00:00",
+    "postingDateMeta": "2026-09-02",
+    "usaIndicator": false,
+    "uaeIndicator": false,
+    "localeLanguages": [
+      {
+        "code": "en_US",
+        "name": "English - US",
+        "translation": "en-US",
+        "direction": "ltr"
+      }
+    ],
+    "postLocationLocaleLanguage": {
+      "postLocation-HY1": [
+        {
+          "code": "en_US",
+          "name": "English - US",
+          "translation": "en-US",
+          "direction": "ltr"
+        }
+      ]
+    },
+    "localizations": {
+      "en_US": {
+        "posting": {
+          "postingTitle": "Software Engineer",
+          "jobSummary": "Apple is where individual imaginations gather together, committing to the values that lead to great work. Every new product we build, service we create, or Apple Store experience we deliver is the result of us making each other\u2019s ideas stronger. That happens because every one of us shares a belief that we can make something wonderful and share it with the world, changing lives for the better. It\u2019s the diversity of our people and their thinking that inspires the innovation that runs through everything we do. When we bring everybody in, we can do the best work of our lives. Here, you\u2019ll do more than join something \u2014 you\u2019ll add something.\n\nOur Operations Team, part of the CS&E organization, plays a critical role in ensuring the stability, reliability, and performance of multiple customer-facing applications that serve millions of users across diverse services. We specialize in sustaining and optimizing our systems, driving operational excellence through automation, cloud infrastructure management, AI-driven insights, and proactive monitoring. Our team thrives on solving challenging problems around Traffic, Deployments, DDoS, WAF, enhancing system resilience, and enabling seamless experiences for our customers. By collaborating closely with development, security, and business teams, we ensure that every application we manage meets Apple's standards of Site Reliability and Security .",
+          "description": "We are seeking a skilled DevOps Engineer who is passionate about operational excellence through automation, AI-driven engineering processes, and strong problem-solving abilities. As a DevOps Engineer, you will play a crucial role in ensuring the seamless integration of development and operations processes to deliver best-in-class and highly available systems. Your expertise in cloud platforms, automation, infrastructure management, and applying LLM/AI capabilities to solve real operational challenges will be vital to the success of our projects. We're looking for someone who thrives on breaking down complex, ambiguous problems and engineering practical, scalable solutions \u2014 not just executing tasks, but thinking critically about root causes and long-term reliability.",
+          "responsibilities": "Linux, Cloud Infrastructure & Migration: Deep operational expertise across Linux internals (process/memory/CPU diagnostics, networking, kernel-level troubleshooting) combined with ownership of AWS/Cloud infrastructure \u2014 architecture, provisioning, disaster recovery , and end-to-end cloud migration (on-prem to AWS), using Terraform/Ansible for infrastructure-as-code at scale.\nKubernetes/EKS Lifecycle & Container Orchestration: Manage the full lifecycle of Kubernetes/EKS environments \u2014 version upgrades, live/rolling patching with zero downtime, node maintenance, cluster optimization, and Helm chart development/troubleshooting.\nTraffic, Network & Security Engineering: Configure and manage NGINX (reverse proxy , load balancing, SSL/TLS, ingress) and GSLB for traffic distribution/failover; implement Shield/WAF-based DDoS protection, threat modeling, and security hardening across the SDLC, including PCI/SOC2/SOX compliance readiness.\nCI/CD, Monitoring & Incident Response: Design and maintain CI/CD pipelines (Jenkins, Spinnaker, GitHub Actions); build actionable monitoring/alerting frameworks (Splunk, Dynatrace, Prometheus, Grafana); participate in production on- call and drive thorough root-cause analysis for P1/P1c incidents.\nAI/LLM-Driven Intelligent Automation: Apply LLM/GenAI-based approaches to automate incident triage, log/anomaly analysis, root cause analysis, runbook generation, and self-healing systems; continuously evaluate and integrate emerging AI/LLM tooling into CI/CD and operations workflows to reduce manual toil.\nEngineering Process Ownership: Design and implement engineering processes that simplify how development teams build, deploy , and operate software, embedding security , compliance, and automation best practices throughout.",
+          "preferredQualifications": "Hands-on experience with LLMs/AI/ML technologies, GenAI tools, agentic frameworks, or AI-driven automation in production environments.\nExperience with NGINX configuration and Shield/WAF/DDoS mitigation strategies at scale.\nStrong problem-solving mindset with demonstrated ability to diagnose complex, ambiguous issues and design scalable, long-term solutions.\nExperience building or integrating LLM-powered agents/copilots for operations, monitoring, or incident response use cases.\nExperience with large-scale on-prem to cloud migrations.\nFamiliarity with AEM and Apache upgrades/troubleshooting.\nExperience handling high-priority incidents (P1/P1c) with strong root-cause analysis discipline.",
+          "minimumQualifications": "5+ years of proven experience as a Senior Ops/SRE/DevOps Engineer or similar role, with demonstrated ownership of production-grade systems.\nStrong Linux systems expertise, hands-on AWS experience, and proficiency managing Kubernetes/EKS (upgrades, patching, Helm).\nStrong programming/scripting skills (Bash, Python, Node, or Java) with proficiency in CI/CD (Jenkins, GitHub Actions, etc.) and observability tooling (Prometheus, Grafana, Splunk).\nBachelor's Degree in CS or equivalent practical experience.",
+          "internalDetails": null
+        },
+        "location": [
+          {
+            "id": "postLocation-HY1",
+            "name": "Hyderabad",
+            "city": "Hyderabad",
+            "code": "HY1",
+            "stateProvince": "Telangana",
+            "countryName": "India",
+            "countryID": "iso-country-IND",
+            "level": 5,
+            "active": true,
+            "postLocationCountryID": "postLocation-INDC",
+            "postingIdentifier": "1052",
+            "showPayAndBenefits": false,
+            "promotedOnLinkedIn": false
+          }
+        ],
+        "teams": [
+          {
+            "code": "SFTWR",
+            "name": "Software and Services",
+            "id": "teamsAndSubTeams-SFTWR"
+          }
+        ]
+      }
+    },
+    "localeLocation": [
+      {
+        "id": "postLocation-HY1",
+        "name": "Hyderabad",
+        "city": "Hyderabad",
+        "code": "HY1",
+        "stateProvince": "Telangana",
+        "countryName": "India",
+        "countryID": "iso-country-IND",
+        "level": 5,
+        "active": true,
+        "postLocationCountryID": "postLocation-INDC",
+        "postingIdentifier": "1052",
+        "showPayAndBenefits": false,
+        "promotedOnLinkedIn": false
+      }
+    ],
+    "employmentType": "Standard",
+    "homeOffice": false,
+    "positionId": "200681116",
+    "isFavorited": false,
+    "submitted": false,
+    "resubmitted": false,
+    "jobType": "CORPORATE",
+    "preferredQualifications": "Hands-on experience with LLMs/AI/ML technologies, GenAI tools, agentic frameworks, or AI-driven automation in production environments.\nExperience with NGINX configuration and Shield/WAF/DDoS mitigation strategies at scale.\nStrong problem-solving mindset with demonstrated ability to diagnose complex, ambiguous issues and design scalable, long-term solutions.\nExperience building or integrating LLM-powered agents/copilots for operations, monitoring, or incident response use cases.\nExperience with large-scale on-prem to cloud migrations.\nFamiliarity with AEM and Apache upgrades/troubleshooting.\nExperience handling high-priority incidents (P1/P1c) with strong root-cause analysis discipline.",
+    "minimumQualifications": "5+ years of proven experience as a Senior Ops/SRE/DevOps Engineer or similar role, with demonstrated ownership of production-grade systems.\nStrong Linux systems expertise, hands-on AWS experience, and proficiency managing Kubernetes/EKS (upgrades, patching, Helm).\nStrong programming/scripting skills (Bash, Python, Node, or Java) with proficiency in CI/CD (Jenkins, GitHub Actions, etc.) and observability tooling (Prometheus, Grafana, Splunk).\nBachelor's Degree in CS or equivalent practical experience.",
+    "internalDetails": null,
+    "selfDisclosureConfig": {
+      "countryID": "iso-country-IND",
+      "gender": true,
+      "ethnicity": false
+    },
+    "roleLocationSelection": false,
+    "postingFooters": [
+      {
+        "postLocationId": "postLocation-HY1",
+        "localizations": {
+          "en_US": [
+            {
+              "displayOrder": 3,
+              "name": "Accessibility",
+              "content": "<p>At Apple, we believe accessibility is a fundamental human right. You\u2019ll find that idea reflected in everything here \u2014 in our culture, our benefits and our digital tools. By welcoming as many perspectives as possible, we help you build a career where you feel like you belong.<br><br><a href='https://www.apple.com/careers/us/accessibility.html' target='_blank' aria-label='Learn about accessibility in Apple\u2019s workplace (Opens in new window)' rel='noopener noreferrer'>Learn about accessibility in Apple\u2019s workplace<span class='icon icon-after icon-external' aria-hidden='true'></span></a></p>"
+            }
+          ]
+        }
+      }
+    ],
+    "postingDate": "Sep 02, 2026",
+    "selectedLocale": "en_US",
+    "translationCd": "en-US",
+    "translations": {
+      "en_US": {
+        "jobsite.jobdetails.responsibilities": "Responsibilities",
+        "jobsite.jobdetails.keyQualifications": "Key Qualifications",
+        "jobsite.jobdetails.workLocations": "Work Locations ({numberOfLocations})",
+        "jobsite.common.mediumDate": "MMM D, YYYY",
+        "jobsite.jobdetails.internalDetails": "Internal Details",
+        "jobsite.common.yes": "Yes",
+        "jobsite.jobdetails.jobShift": "Shift: {shiftSelection}",
+        "jobsite.jobdetails.roleNumber": "Role Number:",
+        "jobsite.jobdetails.jobHighProfileTitle": "High Job Profile: {title}",
+        "jobsite.jobdetails.addlReq": "Additional Requirements",
+        "jobsite.jobdetails.jobLowProfileTitle": "Low Job Profile: {title}",
+        "jobsite.jobdetails.recruiter": "Recruiter: {firstName} {lastName}",
+        "jobsite.jobdetails.jobCostCenter": "Cost Center Name: {dept}",
+        "jobsite.jobdetails.preferredQualifications": "Preferred Qualifications",
+        "jobsite.jobdetails.jobPosted": "Posted: {postedDate}",
+        "jobsite.jobdetails.internalInformation": "Internal Information",
+        "jobsite.jobdetails.weeklyHoursFulltime": "Weekly Hours: {fullTime}",
+        "jobsite.jobdetails.jobHomeOffice": "Home Office:",
+        "jobsite.search.findMore": "See all roles in {location}",
+        "jobsite.jobdetails.description": "Description",
+        "jobsite.common.no": "No",
+        "jobsite.jobdetails.jobDeadLine": "Internal Deadline: {title}",
+        "jobsite.jobdetails.minimumQualifications": "Minimum Qualifications",
+        "jobsite.jobdetails.hiringManager": "Hiring Manager: {firstName} {lastName}",
+        "jobsite.jobdetails.summary": "Summary",
+        "jobsite.information.jobEmployeeTypeTitle": "Employee Type: {type}",
+        "jobsite.jobdetails.eduAndExp": "Education & Experience",
+        "jobsite.jobdetails.jobCompany": "Company: {company}"
+      }
+    },
+    "talentLimitDetails": {
+      "submissionCount": 0,
+      "limit": 0,
+      "thresholdReached": false,
+      "limitReached": false
+    }
+  }
+}

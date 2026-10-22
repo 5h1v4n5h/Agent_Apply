@@ -55,6 +55,7 @@ dependencies = [
 ]
 
 [project.scripts]
+agentapply = "src.cli.main:main"
 autoapply = "src.cli.main:main"
 
 [project.optional-dependencies]

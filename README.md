@@ -1,10 +1,12 @@
 <p align="center">
-  <img src="docs/logo/AutoApply_logo.svg" alt="AutoApply Logo" width="400"/>
+  <h1 align="center">🤖 Agent Apply</h1>
+  <p align="center"><b>Autonomous AI-Powered Job Application Agent with RAG Applicant Memory & Document Generation</b></p>
 </p>
 
 <p align="center">
   <a href="#product">Product</a> •
   <a href="#quick-start">Quick Start</a> •
+  <a href="#knowledge-base">Knowledge Base</a> •
   <a href="#documentation">Docs</a> •
   <a href="#architecture">Architecture</a> •
   <a href="#license">License</a>
@@ -21,19 +23,19 @@
 
 ---
 
-AutoApply is a local-first job application automation workspace. It helps a job seeker discover roles, score fit, generate tailored application materials, prepare applications, and track outcomes while keeping every submit behind an explicit human decision.
+**Agent Apply** is a local-first job application automation workspace. It helps job seekers discover roles, score candidate fit, generate tailored resumes and cover letters, prepare applications, and track outcomes while keeping every submit behind an explicit human decision.
 
-The product combines a Vue/FastAPI operator console, PostgreSQL-backed job and application records, Redis/Celery background work, auditable agent traces, and a provider-agnostic LLM layer supporting OpenAI, Anthropic, Gemini, DeepSeek, Moonshot/Kimi, Qwen, xAI Grok, Groq, Mistral, OpenRouter, Ollama (local), the Claude and Codex CLIs, and user-defined custom OpenAI-compatible providers.
+The product combines a Vue 3/FastAPI operator console, PostgreSQL-backed job and application records (with pgvector), Redis/Celery background work, auditable agent traces, and a provider-agnostic LLM layer supporting OpenAI, Anthropic, Gemini, DeepSeek, Moonshot/Kimi, Qwen, xAI Grok, Groq, Mistral, OpenRouter, Ollama (local), the Claude and Codex CLIs, and user-defined custom OpenAI-compatible providers.
 
-> **License**: [PolyForm Noncommercial 1.0.0](LICENSE). Personal, academic, and nonprofit use is free. Commercial use requires a separate license; see [Commercial Use](#commercial-use).
+> **GitHub Repository**: [https://github.com/5h1v4n5h/Agent_Apply](https://github.com/5h1v4n5h/Agent_Apply)
 
 ## Product
 
-AutoApply is designed for users who want automation without losing control over sensitive application actions.
+Agent Apply is designed for users who want automation without losing control over sensitive application actions:
 
 - **Job discovery**: Search LinkedIn-discovered roles and supported ATS platforms, normalize postings, and keep a durable Job Index.
 - **Fit scoring**: Combine hard rules, semantic matching, freshness checks, and explainability for rejected or borderline jobs.
-- **Applicant memory**: Maintain structured profile data, story bank entries, bullet pools, and reusable Q&A material.
+- **Applicant memory & Knowledge Base**: Maintain structured profile data, story bank entries, bullet pools, and reusable Q&A material.
 - **Materials workspace**: Generate resumes and cover letters from a job or pasted JD, using templates, source documents, and evidence-grounded IR.
 - **Document library**: Curate trusted resumes and cover letters, reuse them as generation bases, and promote generated artifacts when they are worth keeping.
 - **Automation plans**: Create user-defined recurring tasks that search, scrape, score, prepare materials, and optionally auto-apply eligible jobs.
@@ -54,43 +56,83 @@ Latest local verification in this workspace:
 
 For implementation-level history, see [Phase History](docs/PHASE_HISTORY.md) and [Changelog](docs/CHANGELOG.md).
 
-## Quick Start
+## Quick Start: How to Run
 
-Install dependencies once, then use the unified local launcher:
+### 1. Prerequisites
+- **Python 3.12+** with [uv](https://github.com/astral-sh/uv) package manager installed.
+- **Docker & Docker Desktop** (for PostgreSQL + pgvector and Redis).
+- **Node.js 18+ & npm** (optional, only needed if modifying `frontend/`).
+
+### 2. Initial Setup
+Clone the repository and prepare your environment:
 
 ```powershell
-# 1. Set AUTOAPPLY_DB_PASSWORD in .env (any non-empty value), then install deps
-uv sync
-uv run playwright install chromium
-uv run autoapply init
+# Clone the repository
+git clone https://github.com/5h1v4n5h/Agent_Apply.git
+cd Agent_Apply
 
-# 2. Start Postgres + Redis, migrations, Celery worker/Beat, and the web UI
+# 1. Create .env from template and configure database password
+cp .env.example .env
+
+# 2. Sync Python virtual environment and install dependencies
+uv sync
+
+# 3. Install Playwright browser dependencies (for ATS form automation)
+uv run playwright install chromium
+
+# 4. Bootstrap user configuration files & directories
+uv run autoapply init
+```
+
+### 3. Launching the System
+
+```powershell
+# Start Postgres + Redis containers, apply Alembic migrations, start Celery workers and Web UI:
 uv run autoapply start
 ```
 
-Open the web console at `http://127.0.0.1:8000`.
+Once running, navigate to:
+👉 **Web Console**: `http://127.0.0.1:8000`
 
-`autoapply start` runs Docker Compose for **data dependencies**
-(Postgres + Redis), applies Alembic migrations, starts Celery worker
-and Beat, then launches the Python web app on the host. Use
-`uv run autoapply start --check` to print the exact startup plan without
-starting anything. If the default host ports are unavailable, the launcher
-chooses alternate ports and passes them to Compose, Alembic, Celery, and
-the web process for that run. It is cross-platform; Docker Desktop can be
-auto-launched on Windows/macOS when installed, while Linux expects the
-Docker daemon to already be available. For a single-server production install that runs the
-same processes under one supervisor, see `supervisord.conf` and section
-15 of [the deployment guide](docs/DEPLOYMENT.md).
-
-If you modify frontend files:
+### 4. Configuring LLM Providers
+Agent Apply supports over 12+ LLM backends (Gemini, OpenAI, Anthropic, DeepSeek, Ollama, etc.). Set your key either directly in `.env` or via CLI:
 
 ```powershell
-cd frontend
-npm install
-npm run build
+# Configure Gemini:
+uv run autoapply provider set-key gemini YOUR_GEMINI_API_KEY
+uv run autoapply provider set-primary gemini
+uv run autoapply provider test gemini
+
+# Or configure OpenAI / Anthropic:
+uv run autoapply provider set-key openai sk-...
+uv run autoapply provider set-primary openai
 ```
 
-The repository includes built SPA assets under `src/web/static/spa`, so a frontend rebuild is only required after editing `frontend/`.
+---
+
+## Knowledge Base & Applicant Memory
+
+Agent Apply is grounded on a durable, verified applicant knowledge base to guarantee **0% hallucination** in resumes and cover letters.
+
+Detailed documentation: 📖 [docs/KNOWLEDGE_BASE.md](docs/KNOWLEDGE_BASE.md)
+
+### Managing Your Profile Knowledge Base
+- **Active Profile**: Stored at `data/profile/profile.yaml` (a clean template is provided).
+- **Sample Template**: `data/profile/profile.example.yaml`
+- **Schema Reference**: `data/profile/schema.yaml`
+
+The Knowledge Base houses:
+1. **Identity & Constraints**: Contact info, citizenship, visa sponsorship, location preferences.
+2. **Education**: Degrees, institutions, GPA, and course tags.
+3. **Work Experience Bullet Pool**: Action-oriented bullets with quantified impact tags.
+4. **Project Showcase**: Open-source repositories, system architectures, and technical stacks.
+5. **Skill Taxonomy**: Structured languages, frameworks, databases, tools, and domains.
+6. **STAR Story Bank**: Structured situational behavioral interview answers.
+7. **Deterministic QA Bank**: Instant answers for standard ATS screening questions.
+
+You can edit `data/profile/profile.yaml` directly in your editor or via the **Profile** tab in the Web Console.
+
+---
 
 ## Requirements
 

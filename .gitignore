@@ -34,13 +34,13 @@ output/
 temp/
 *.pdf
 *.docx
-!templates/*.docx
+!data/templates/**/*.docx
+!templates/**/*.docx
 *.csv
 
 # Data
 *.db
 *.sqlite3
-data/profile/profile.yaml
 data/output/*
 !data/output/.gitkeep
 data/quarantine/
@@ -56,10 +56,8 @@ config/filters.yaml
 config/search_profiles.yaml
 config/material_defaults.yaml
 
-# Profile data — pure user state (PII: name, email, phone, work history).
-# Created via the web UI; never tracked.
-data/profile/active_profile.txt
-data/profile/profiles/*.yaml
+# Profile data (sample placeholder included; user custom profiles can be ignored if desired)
+# data/profile/profiles/my_private_profile.yaml
 
 # Alembic (may contain DB credentials)
 alembic.ini
